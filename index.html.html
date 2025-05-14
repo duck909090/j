@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Webcrumbs Plugin</title>
+        <style>
+            @import url(https://fonts.googleapis.com/css2?family=Lato&display=swap);
+            @import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
+            @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
+        </style>
+    </head>
+    <body>
+        <div id="webcrumbs">
+            <div class="w-[1200px] mx-auto p-6 font-sans bg-gradient-to-br from-pink-100 to-purple-200 min-h-screen">
+                <header class="text-center py-16 animate-fade-in-down">
+                    <h1 class="text-6xl font-bold text-primary-600 mb-4 animate-bounce">Happy Birthday Joe!</h1>
+                    <p class="text-xl text-gray-700 max-w-2xl mx-auto">
+                        Scroll down to discover your special birthday gifts!
+                    </p>
+                    <div class="mt-8"></div>
+                </header>
+                <div class="py-10">
+                    <div class="flex flex-col items-center justify-center mb-10">
+                        <div class="w-full max-w-3xl relative">
+                            <img
+                                src="https://i.pinimg.com/736x/e7/13/4b/e7134ba40632ee9e9d187de3ed603dec.jpg"
+                                alt="Birthday cake with candles"
+                                class="w-full h-67 object-cover rounded-lg shadow-lg mb-6"
+                                keywords="birthday cake, celebration, candles, party"
+                            />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg flex items-end"
+                            >
+                                <p class="text-white p-4 text-xl font-medium">happy 22!</p>
+                            </div>
+                        </div>
+                        <p class="text-lg text-gray-700 mt-6">Scroll down to discover your birthday coupons...</p>
+                        <div class="animate-bounce mt-6">
+                            <span class="material-symbols-outlined text-4xl text-primary-500">arrow_downward</span>
+                        </div>
+                    </div>
+                    <div class="mt-16 mb-24 text-center">
+                        <h2 class="text-4xl font-bold mb-12 text-gray-800 relative inline-block">
+                            Your Special Coupons
+                            <div class="absolute -bottom-2 left-0 right-0 h-1 bg-primary-400 rounded-full"></div>
+                        </h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+                            <div
+                                class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                            >
+                                <div
+                                    class="bg-gradient-to-r from-pink-500 to-rose-500 h-12 flex items-center justify-center"
+                                >
+                                    <span class="material-symbols-outlined text-white">favorite</span>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-3 text-gray-800">Free Head</h3>
+                                    <div class="flex justify-between text-sm text-gray-600 mb-3">
+                                        <span>Coupon Code:</span> <span class="font-mono font-semibold">09834</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm text-gray-600 mb-6">
+                                        <span>Expires:</span> <span class="font-semibold">Never</span>
+                                    </div>
+                                    <button
+                                        class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg transition-colors duration-300"
+                                        data-handler="handler_0"
+                                    >
+                                        Redeem Now
+                                    </button>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                            >
+                                <div
+                                    class="bg-gradient-to-r from-amber-400 to-orange-500 h-12 flex items-center justify-center"
+                                >
+                                    <span class="material-symbols-outlined text-white">wb_sunny</span>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-3 text-gray-800">Watch Sunset</h3>
+                                    <div class="flex justify-between text-sm text-gray-600 mb-3">
+                                        <span>Coupon Code:</span> <span class="font-mono font-semibold">07834</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm text-gray-600 mb-6">
+                                        <span>Expires:</span> <span class="font-semibold">Never</span>
+                                    </div>
+                                    <button
+                                        class="w-full bg-orange-500 hover:bg-orange-600 text-white py-2 rounded-lg transition-colors duration-300"
+                                        data-handler="handler_1"
+                                    >
+                                        Redeem Now
+                                    </button>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                            >
+                                <div
+                                    class="bg-gradient-to-r from-primary-400 to-primary-600 h-12 flex items-center justify-center"
+                                >
+                                    <span class="material-symbols-outlined text-white">favorite_border</span>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-3 text-gray-800">Free Makeout</h3>
+                                    <div class="flex justify-between text-sm text-gray-600 mb-3">
+                                        <span>Coupon Code:</span> <span class="font-mono font-semibold">069690</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm text-gray-600 mb-6">
+                                        <span>Expires:</span> <span class="font-semibold">Never</span>
+                                    </div>
+                                    <button
+                                        class="w-full bg-primary-500 hover:bg-primary-600 text-white py-2 rounded-lg transition-colors duration-300"
+                                        data-handler="handler_2"
+                                    >
+                                        Redeem Now
+                                    </button>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                            >
+                                <div
+                                    class="bg-gradient-to-r from-purple-500 to-indigo-500 h-12 flex items-center justify-center"
+                                >
+                                    <span class="material-symbols-outlined text-white">movie</span>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-3 text-gray-800">Movie Date</h3>
+                                    <div class="flex justify-between text-sm text-gray-600 mb-3">
+                                        <span>Coupon Code:</span> <span class="font-mono font-semibold">56732</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm text-gray-600 mb-6">
+                                        <span>Expires:</span> <span class="font-semibold">Never</span>
+                                    </div>
+                                    <button
+                                        class="w-full bg-indigo-500 hover:bg-indigo-600 text-white py-2 rounded-lg transition-colors duration-300"
+                                        data-handler="handler_3"
+                                    >
+                                        Redeem Now
+                                    </button>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                            >
+                                <div
+                                    class="bg-gradient-to-r from-red-400 to-pink-400 h-12 flex items-center justify-center"
+                                >
+                                    <span class="material-symbols-outlined text-white">volunteer_activism</span>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-3 text-gray-800">Free Kisses</h3>
+                                    <div class="flex justify-between text-sm text-gray-600 mb-3">
+                                        <span>Coupon Code:</span> <span class="font-mono font-semibold">23451</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm text-gray-600 mb-6">
+                                        <span>Expires:</span> <span class="font-semibold">Never</span>
+                                    </div>
+                                    <button
+                                        class="w-full bg-pink-500 hover:bg-pink-600 text-white py-2 rounded-lg transition-colors duration-300"
+                                        data-handler="handler_4"
+                                    >
+                                        Redeem Now
+                                    </button>
+                                </div>
+                            </div>
+                            <div>
+                                <div
+                                    class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                                >
+                                    <div
+                                        class="bg-gradient-to-r from-teal-400 to-cyan-500 h-12 flex items-center justify-center"
+                                    >
+                                        <span class="material-symbols-outlined text-white">nightlight</span>
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-bold mb-3 text-gray-800">Cuddle</h3>
+                                        <div class="flex justify-between text-sm text-gray-600 mb-3">
+                                            <span>Coupon Code:</span> <span class="font-mono font-semibold">56783</span>
+                                        </div>
+                                        <div class="flex justify-between text-sm text-gray-600 mb-6">
+                                            <span>Expires:</span> <span class="font-semibold">Never</span>
+                                        </div>
+                                        <button
+                                            class="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-2 rounded-lg transition-colors duration-300"
+                                            data-handler="handler_5"
+                                        >
+                                            Redeem Now
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mb-20">
+                        <h2 class="text-3xl font-bold mb-6 text-gray-800">How To Use Your Coupons</h2>
+                        <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-md">
+                            <ol class="list-decimal list-inside text-left space-y-4 text-gray-700">
+                                <li class="p-2 hover:bg-pink-50 rounded transition-colors duration-200">
+                                    Select the coupon you&#x27;d like to use
+                                </li>
+                                <li class="p-2 hover:bg-pink-50 rounded transition-colors duration-200">
+                                    Show M the coupon code
+                                </li>
+                                <li class="p-2 hover:bg-pink-50 rounded transition-colors duration-200">
+                                    Enjoy your special gift!
+                                </li>
+                                <li class="p-2 hover:bg-pink-50 rounded transition-colors duration-200">
+                                    Coupons can be redeemed at any time
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <footer class="text-center py-10 text-gray-600 border-t border-gray-200">
+                    <p class="mb-2">Made with ❤️ for Joe&#x27;s Birthday</p>
+                    <p class="text-sm">© 2025 Birthday Wishes</p>
+                </footer>
+                <style>
+                    @keyframes fade-in-down {
+                        0% {
+                            opacity: 0;
+                            transform: translateY(-20px);
+                        }
+                        100% {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+                    .animate-fade-in-down {
+                        animation: fade-in-down 1s ease-out;
+                    }
+                </style>
+            </div>
+        </div>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                content: ["./src/**/*.{html,js}"],
+                theme: {
+                    name: "Custom",
+                    fontFamily: {
+                        sans: [
+                            "Open Sans",
+                            "ui-sans-serif",
+                            "system-ui",
+                            "sans-serif",
+                            '"Apple Color Emoji"',
+                            '"Segoe UI Emoji"',
+                            '"Segoe UI Symbol"',
+                            '"Noto Color Emoji"'
+                        ]
+                    },
+                    extend: {
+                        fontFamily: {
+                            title: [
+                                "Lato",
+                                "ui-sans-serif",
+                                "system-ui",
+                                "sans-serif",
+                                '"Apple Color Emoji"',
+                                '"Segoe UI Emoji"',
+                                '"Segoe UI Symbol"',
+                                '"Noto Color Emoji"'
+                            ],
+                            body: [
+                                "Open Sans",
+                                "ui-sans-serif",
+                                "system-ui",
+                                "sans-serif",
+                                '"Apple Color Emoji"',
+                                '"Segoe UI Emoji"',
+                                '"Segoe UI Symbol"',
+                                '"Noto Color Emoji"'
+                            ]
+                        },
+                        colors: {
+                            neutral: {
+                                50: "#f7f7f7",
+                                100: "#eeeeee",
+                                200: "#e0e0e0",
+                                300: "#cacaca",
+                                400: "#b1b1b1",
+                                500: "#999999",
+                                600: "#7f7f7f",
+                                700: "#676767",
+                                800: "#545454",
+                                900: "#464646",
+                                950: "#282828"
+                            },
+                            primary: {
+                                50: "#f8f8fa",
+                                100: "#f2f2f5",
+                                200: "#e8e6ee",
+                                300: "#d6d2e0",
+                                400: "#b6afc6",
+                                500: "#a59bb7",
+                                600: "#9183a4",
+                                700: "#7f7091",
+                                800: "#695e79",
+                                900: "#584e64",
+                                950: "#393342",
+                                DEFAULT: "#b6afc6"
+                            }
+                        }
+                    },
+                    fontSize: {
+                        xs: ["12px", {lineHeight: "19.200000000000003px"}],
+                        sm: ["14px", {lineHeight: "21px"}],
+                        base: ["16px", {lineHeight: "25.6px"}],
+                        lg: ["18px", {lineHeight: "27px"}],
+                        xl: ["20px", {lineHeight: "28px"}],
+                        "2xl": ["24px", {lineHeight: "31.200000000000003px"}],
+                        "3xl": ["30px", {lineHeight: "36px"}],
+                        "4xl": ["36px", {lineHeight: "41.4px"}],
+                        "5xl": ["48px", {lineHeight: "52.800000000000004px"}],
+                        "6xl": ["60px", {lineHeight: "66px"}],
+                        "7xl": ["72px", {lineHeight: "75.60000000000001px"}],
+                        "8xl": ["96px", {lineHeight: "100.80000000000001px"}],
+                        "9xl": ["128px", {lineHeight: "134.4px"}]
+                    },
+                    borderRadius: {
+                        none: "0px",
+                        sm: "6px",
+                        DEFAULT: "12px",
+                        md: "18px",
+                        lg: "24px",
+                        xl: "36px",
+                        "2xl": "48px",
+                        "3xl": "72px",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        0: "0px",
+                        1: "4px",
+                        2: "8px",
+                        3: "12px",
+                        4: "16px",
+                        5: "20px",
+                        6: "24px",
+                        7: "28px",
+                        8: "32px",
+                        9: "36px",
+                        10: "40px",
+                        11: "44px",
+                        12: "48px",
+                        14: "56px",
+                        16: "64px",
+                        20: "80px",
+                        24: "96px",
+                        28: "112px",
+                        32: "128px",
+                        36: "144px",
+                        40: "160px",
+                        44: "176px",
+                        48: "192px",
+                        52: "208px",
+                        56: "224px",
+                        60: "240px",
+                        64: "256px",
+                        72: "288px",
+                        80: "320px",
+                        96: "384px",
+                        px: "1px",
+                        0.5: "2px",
+                        1.5: "6px",
+                        2.5: "10px",
+                        3.5: "14px"
+                    }
+                },
+                plugins: [],
+                important: "#webcrumbs"
+            }
+        </script>
+        <script>
+            document.querySelector('[data-handler="handler_0"]').addEventListener("click", () => {
+                alert("Coupon redeemed! Text yo girlfriend for details :)")
+            })
+            document.querySelector('[data-handler="handler_1"]').addEventListener("click", () => {
+                alert("Coupon redeemed! Text yo girlfriend for details :)")
+            })
+            document.querySelector('[data-handler="handler_2"]').addEventListener("click", () => {
+                alert("Coupon redeemed! Text yo girlfriend for details :)")
+            })
+            document.querySelector('[data-handler="handler_3"]').addEventListener("click", () => {
+                alert("Coupon redeemed! Text yo girlfriend for details :)")
+            })
+            document.querySelector('[data-handler="handler_4"]').addEventListener("click", () => {
+                alert("Coupon redeemed! Text yo girlfriend for details :)")
+            })
+            document.querySelector('[data-handler="handler_5"]').addEventListener("click", () => {
+                alert("Coupon redeemed! Text yo girlfriend for details :)")
+            })
+        </script>
+    </body>
+</html>
